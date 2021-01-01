@@ -1,0 +1,12 @@
+
+.DS_Store
+._*
+Thumbs.db
+Icon
+*.aux
+*.out
+*.log
+*~
+*.class
+*/*.class
+*/*/*.class
