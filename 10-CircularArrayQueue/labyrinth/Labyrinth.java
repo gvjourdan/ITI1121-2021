@@ -89,38 +89,38 @@ public class Labyrinth {
     		if (lines[i].length() != columns)
     			throw new IllegalArgumentException("rows have different sizes: 0, " + i);
 
-    		char[][] grid = new char[rows][];
+		char[][] grid = new char[rows][];
 
-    		for (int i=0; i<rows; i++) {
-    			grid[i] = lines[i].toCharArray();
-    		}
+		for (int i=0; i<rows; i++) {
+			grid[i] = lines[i].toCharArray();
+		}
 
-    		int iEntrance = -1, jEntrance = -1;
-    		int iExit = -1, jExit = -1;
+		int iEntrance = -1, jEntrance = -1;
+		int iExit = -1, jExit = -1;
 
-    		for (int i=0; i<rows; i++) {
-    			for (int j=0; j<columns; j++) {
-    				switch (grid[i][j]) {
-    					case IN: 
-    					iEntrance = i;
-    					jEntrance = j;
-    					break;
-    					case OUT: 
-    					iExit = i;
-    					jExit = j;
-    					break;
-    				}
-    			}
-    		}
+		for (int i=0; i<rows; i++) {
+			for (int j=0; j<columns; j++) {
+				switch (grid[i][j]) {
+					case IN: 
+					iEntrance = i;
+					jEntrance = j;
+					break;
+					case OUT: 
+					iExit = i;
+					jExit = j;
+					break;
+				}
+			}
+		}
 
-    		if (iEntrance == -1)
-    			throw new IllegalArgumentException("has no entrance");
+		if (iEntrance == -1)
+			throw new IllegalArgumentException("has no entrance");
 
-    		if (iExit == -1)
-    			throw new IllegalArgumentException("has no exit");
+		if (iExit == -1)
+			throw new IllegalArgumentException("has no exit");
 
-    		return new Labyrinth(grid, iEntrance, jEntrance);
-    	}
+		return new Labyrinth(grid, iEntrance, jEntrance);
+	}
 
     // Creates array of Strings from a list of Strings.
 
