@@ -8,10 +8,10 @@ public class Time {
     private int minutes;
     private int seconds;
 
-    public Time(int h, int minutes, int seconds){
-        hours = h;
-        minutes = minutes;
-        seconds = seconds;
+    public Time(int hours, int minutes, int seconds){
+        this.hours = hours;
+        this.minutes = minutes;
+        this.seconds = seconds;
         normalize();
     }
 
